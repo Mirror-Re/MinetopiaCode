@@ -1,0 +1,16 @@
+body{
+    background-image: url(cave1.webp);
+}
+h1{
+    text-align: center;
+    font-size: xxx-large;
+    color: #426343;
+}
+.header{
+    background-color: black;
+}
+button{
+    width: 250px;
+    height: 150px;
+    font-size: xx-large;
+}
