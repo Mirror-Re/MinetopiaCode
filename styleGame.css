@@ -1,0 +1,26 @@
+body{
+    background-image: url(cave1.webp);
+}
+h1{
+
+}
+h2{
+    color: lightgrey;
+}
+button{
+    width: 270px;
+    height: 250px;
+    font-size: xx-large;
+}
+.clicker{
+    background-color: #2c2d2e;
+}
+.container{
+    background-color: #2c2d2e;
+    width: 1000px;
+    height: 500px;
+}
+#outerdiv{
+    background-color: grey;
+    width: 1005px;
+}

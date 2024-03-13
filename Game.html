@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Minetopia</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="styleGame.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<div class="picture" id="">
-
+<div align="center" class="picture" id="clicker">
+    <button class="clicker" id="picbutton">
+        <img src="rock1-removebg-preview.png">
+    </button>
 </div>
+<br>
+<br>
+<h2>Rocks Mined: <span id="points">0</span></h2>
+<div id="outerdiv">
+    <div class="container">
+        <h1></h1>
+    </div>
+</div>
+
+<script>
+    let amount = 0;
+    let button = document.getElementById("clicker");
+    let disp = document.getElementById("points");
+
+    button.onclick = function () {
+        amount++;
+        disp.innerHTML = amount;
+    }
+</script>
 </body>
 </html>
