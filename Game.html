@@ -8,7 +8,7 @@
 <body>
 <div align="center" class="picture" id="clicker">
     <button class="clicker" id="picbutton">
-        <img src="rock1-removebg-preview.png">
+        <img id="picarea" src="rock1-removebg-preview.png">
     </button>
 </div>
 <br>
@@ -16,11 +16,89 @@
 <h2>Rocks Mined: <span id="points">0</span></h2>
 <div id="outerdiv">
     <div class="container">
+        <h2>MineShop!</h2>
+        <h3>Power-Up: 2 rocks per click&nbsp;&nbsp;<button id="buy1">Purchase: -50 rocks</button></h3>
+        <h3>Power-Up: 5 rocks per click&nbsp;&nbsp;<button id="buy2">Purchase: -100 rocks</button></h3>
+        <h3>Power-Up: 10 rocks per click&nbsp;&nbsp;<button id="buy3">Purchase: -200 rocks</button></h3>
+        <h3>Power-Up: 50 rocks per click&nbsp;&nbsp;<button id="buy4">Purchase: -500 rocks</button></h3>
+        <br>
         <h1></h1>
+        <h2>Buy New Rocks!</h2>
+        <h3>Unlock Copper: 100 rocks per click&nbsp;&nbsp;<button id="rock2">Purchase: -2,000 rocks</button></h3>
+        <h3>Unlock Iron: 300 rocks per click&nbsp;&nbsp;<button id="rock3">Purchase: -6,000 rocks</button></h3>
+        <h3>Unlock Silver: 700 rocks per click&nbsp;&nbsp;<button id="rock3">Purchase: -10,000 rocks</button></h3>
     </div>
 </div>
 
 <script>
+    const buy1 = document.getElementById('buy1');
+    const buy2 = document.getElementById('buy2');
+    const buy3 = document.getElementById('buy3');
+    const buy4 = document.getElementById('buy4');
+    let clickAmount = 0;
+
+    buy1.addEventListener('click', function(){
+        amount -= 50;
+        disp.innerHTML = amount;
+        button.onclick = function () {
+            clickAmount++;
+            amount += 2;
+            disp.innerHTML = amount;
+        }
+    })
+
+    buy2.addEventListener('click', function(){
+        amount -= 100;
+        disp.innerHTML = amount;
+        button.onclick = function () {
+            clickAmount++;
+            amount += 5;
+            disp.innerHTML = amount;
+        }
+    })
+    buy3.addEventListener('click', function(){
+        amount -= 200;
+        disp.innerHTML = amount;
+        button.onclick = function () {
+            clickAmount++;
+            amount += 10;
+            disp.innerHTML = amount;
+        }
+    })
+    buy4.addEventListener('click', function(){
+        amount -= 500;
+        disp.innerHTML = amount;
+        button.onclick = function () {
+            clickAmount++;
+            amount += 50;
+            disp.innerHTML = amount;
+        }
+    })
+
+    const ironRock  = document.getElementById('rock2');
+    const copperRock = document.getElementById('rock3');
+
+    copperRock.addEventListener('click', function(){
+        amount -= 2000;
+        disp.innerHTML = amount;
+        picarea.src="copper-removebg-preview.png"
+        button.onclick = function () {
+            clickAmount++;
+            amount += 100;
+            disp.innerHTML = amount;
+        }
+    })
+    ironRock.addEventListener('click', function(){
+        amount -= 6000;
+        disp.innerHTML = amount;
+        picarea.src="iron-removebg-preview.png"
+        button.onclick = function () {
+            clickAmount++;
+            amount += 300;
+            disp.innerHTML = amount;
+        }
+    })
+
     let amount = 0;
     let button = document.getElementById("clicker");
     let disp = document.getElementById("points");
