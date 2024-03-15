@@ -1,0 +1,28 @@
+body{
+    background-image: url('CrystalCavernBig.jpg');
+    background-repeat: no-repeat;
+}
+h1{
+    color: mediumpurple;
+}
+h2{
+    color: mediumpurple;
+}
+h3{
+    color: lightseagreen;
+}
+.clicker{
+    background-color: #bccae6;
+    width: 270px;
+    height: 250px;
+    font-size: xx-large;
+}
+.container{
+    background-color: #bccae6;
+    width: 1000px;
+    height: 500px;
+}
+#outerdiv{
+    background-color: grey;
+    width: 1005px;
+}
