@@ -8,7 +8,7 @@
 <body>
 <div align="center" class="picture" id="clicker">
     <button class="clicker" id="picbutton">
-        <img align="center" id="picarea" src="amethyst-removebg-preview.png">
+        <img align="center" id="picarea" src="amethyst.png">
     </button>
 </div>
 <br>
@@ -17,18 +17,18 @@
 <div id="outerdiv">
     <div class="container">
         <h2>MineShop!</h2>
-        <h3>Power-Up: 2 rocks per click&nbsp;&nbsp;<button id="buy1">Purchase: -50 rocks</button></h3>
-        <h3>Power-Up: 5 rocks per click&nbsp;&nbsp;<button id="buy2">Purchase: -100 rocks</button></h3>
-        <h3>Power-Up: 10 rocks per click&nbsp;&nbsp;<button id="buy3">Purchase: -200 rocks</button></h3>
-        <h3>Power-Up: 50 rocks per click&nbsp;&nbsp;<button id="buy4">Purchase: -500 rocks</button></h3>
+        <h3>Power-Up: 800 rocks per click&nbsp;&nbsp;<button id="buy1">Purchase: -20,000 rocks</button></h3>
+        <h3>Power-Up: 1,000 rocks per click&nbsp;&nbsp;<button id="buy2">Purchase: -35,000 rocks</button></h3>
+        <h3>Power-Up: 1,200 rocks per click&nbsp;&nbsp;<button id="buy3">Purchase: -40,200 rocks</button></h3>
+        <h3>Power-Up: 1,500 rocks per click&nbsp;&nbsp;<button id="buy4">Purchase: -70,000 rocks</button></h3>
         <br>
         <h1></h1>
-        <h2>Buy New Rocks!</h2>
-        <h3>Unlock Copper: 100 rocks per click&nbsp;&nbsp;<button id="rock2">Purchase: -2,000 rocks</button></h3>
+        <h2>Buy New Crystals!</h2>
+        <h3>Unlock sapphire: 2,000 rocks per click&nbsp;&nbsp;<button id="rock2">Purchase: -200,000 rocks</button></h3>
         <h3>Unlock Iron: 300 rocks per click&nbsp;&nbsp;<button id="rock3">Purchase: -6,000 rocks</button></h3>
         <h3>Unlock Silver: 500 rocks per click&nbsp;&nbsp;<button id="rock4">Purchase: -10,000 rocks</button></h3>
         <br>
-        <h2>Unlock New Area! <a href="CrystalCaverns.html"><button>Unlock Crystal Caverns: -90,000 rocks</button></a></h2>
+        <h2>Unlock Next Area! <a href="CrystalCaverns.html"><button>Unlock Crystal Caverns: -1,000,000 rocks</button></a></h2>
     </div>
 </div>
 
@@ -40,61 +40,61 @@
     let clickAmount = 0;
 
     buy1.addEventListener('click', function(){
-        amount -= 50;
+        amount -= 20000;
         disp.innerHTML = amount;
         button.onclick = function () {
             clickAmount++;
-            amount += 2;
+            amount += 800;
             disp.innerHTML = amount;
         }
     })
 
     buy2.addEventListener('click', function(){
-        amount -= 100;
+        amount -= 35000;
         disp.innerHTML = amount;
         button.onclick = function () {
             clickAmount++;
-            amount += 5;
+            amount += 1000;
             disp.innerHTML = amount;
         }
     })
     buy3.addEventListener('click', function(){
-        amount -= 200;
+        amount -= 40200;
         disp.innerHTML = amount;
         button.onclick = function () {
             clickAmount++;
-            amount += 10;
+            amount += 1200;
             disp.innerHTML = amount;
         }
     })
     buy4.addEventListener('click', function(){
-        amount -= 500;
+        amount -= 70000;
         disp.innerHTML = amount;
         button.onclick = function () {
             clickAmount++;
-            amount += 50;
+            amount += 1500;
             disp.innerHTML = amount;
         }
     })
 
-    const copperRock  = document.getElementById('rock2');
+    const sapphire  = document.getElementById('rock2');
     const ironRock = document.getElementById('rock3');
     const silverRock = document.getElementById('rock4');
 
-    copperRock.addEventListener('click', function(){
-        amount -= 2000;
+    sapphire.addEventListener('click', function(){
+        amount -= 200000;
         disp.innerHTML = amount;
-        picarea.src="copper-removebg-preview.png"
+        picarea.src="sapphire.png"
         button.onclick = function () {
             clickAmount++;
-            amount += 500;
+            amount += 2000;
             disp.innerHTML = amount;
         }
     })
     ironRock.addEventListener('click', function(){
         amount -= 6000;
         disp.innerHTML = amount;
-        picarea.src="iron-removebg-preview.png"
+        picarea.src="iron.png"
         button.onclick = function () {
             clickAmount++;
             amount += 300;
@@ -104,7 +104,7 @@
     silverRock.addEventListener('click', function(){
         amount -= 10000;
         disp.innerHTML = amount;
-        picarea.src="s9ilver-removebg-preview.png"
+        picarea.src="silver.png"
         button.onclick = function () {
             clickAmount++;
             amount += 300;
@@ -117,7 +117,7 @@
     let disp = document.getElementById("points");
 
     button.onclick = function () {
-        amount++;
+        amount += 500;
         disp.innerHTML = amount;
     }
 </script>
