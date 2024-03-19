@@ -24,11 +24,11 @@
         <br>
         <h1></h1>
         <h2>Buy New Crystals!</h2>
-        <h3>Unlock sapphire: 2,000 rocks per click&nbsp;&nbsp;<button id="rock2">Purchase: -200,000 rocks</button></h3>
-        <h3>Unlock Iron: 300 rocks per click&nbsp;&nbsp;<button id="rock3">Purchase: -6,000 rocks</button></h3>
-        <h3>Unlock Silver: 500 rocks per click&nbsp;&nbsp;<button id="rock4">Purchase: -10,000 rocks</button></h3>
+        <h3>Unlock Sapphire: 2,000 rocks per click&nbsp;&nbsp;<button id="rock2">Purchase: -200,000 rocks</button></h3>
+        <h3>Unlock Emerald: 5,000 rocks per click&nbsp;&nbsp;<button id="rock3">Purchase: -450,000 rocks</button></h3>
+        <h3>Unlock Diamond: 10,000 rocks per click&nbsp;&nbsp;<button id="rock4">Purchase: -900,000 rocks</button></h3>
         <br>
-        <h2>Unlock Next Area! <a href="CrystalCaverns.html"><button>Unlock Crystal Caverns: -1,000,000 rocks</button></a></h2>
+        <h2>Unlock Next Area!<a href="CrystalCaverns.html"><button id="nextWorld">Unlock Crystal Caverns: -1,000,000 rocks</button></a></h2>
     </div>
 </div>
 
@@ -40,75 +40,111 @@
     let clickAmount = 0;
 
     buy1.addEventListener('click', function(){
-        amount -= 20000;
-        disp.innerHTML = amount;
-        button.onclick = function () {
-            clickAmount++;
-            amount += 800;
+        if (amount >= 20000){
+            amount -= 20000;
             disp.innerHTML = amount;
+            button.onclick = function () {
+                clickAmount++;
+                amount += 800;
+                disp.innerHTML = amount;
+            }
+        } else  {
+            alert("Not enough rocks!");
         }
     })
 
     buy2.addEventListener('click', function(){
-        amount -= 35000;
-        disp.innerHTML = amount;
-        button.onclick = function () {
-            clickAmount++;
-            amount += 1000;
+        if (amount >= 35000){
+            amount -= 35000;
             disp.innerHTML = amount;
+            button.onclick = function () {
+                clickAmount++;
+                amount += 1000;
+                disp.innerHTML = amount;
+            }
+        } else  {
+            alert("Not enough rocks!");
         }
     })
     buy3.addEventListener('click', function(){
-        amount -= 40200;
-        disp.innerHTML = amount;
-        button.onclick = function () {
-            clickAmount++;
-            amount += 1200;
+        if (amount >= 40200){
+            amount -= 40200;
             disp.innerHTML = amount;
+            button.onclick = function () {
+                clickAmount++;
+                amount += 1200;
+                disp.innerHTML = amount;
+            }
+        } else  {
+            alert("Not enough rocks!");
         }
     })
     buy4.addEventListener('click', function(){
-        amount -= 70000;
-        disp.innerHTML = amount;
-        button.onclick = function () {
-            clickAmount++;
-            amount += 1500;
+        if (amount >= 70000){
+            amount -= 70000;
             disp.innerHTML = amount;
+            button.onclick = function () {
+                clickAmount++;
+                amount += 1500;
+                disp.innerHTML = amount;
+            }
+        } else  {
+            alert("Not enough rocks!");
         }
     })
 
     const sapphire  = document.getElementById('rock2');
-    const ironRock = document.getElementById('rock3');
-    const silverRock = document.getElementById('rock4');
+    const emerald = document.getElementById('rock3');
+    const diamond = document.getElementById('rock4');
 
     sapphire.addEventListener('click', function(){
-        amount -= 200000;
-        disp.innerHTML = amount;
-        picarea.src="sapphire.png"
-        button.onclick = function () {
-            clickAmount++;
-            amount += 2000;
+        if (amount >= 200000){
+            amount -= 200000;
             disp.innerHTML = amount;
+            picarea.src="sapphire.png"
+            button.onclick = function () {
+                clickAmount++;
+                amount += 2000;
+                disp.innerHTML = amount;
+            }
+        } else  {
+            alert("Not enough rocks!");
         }
     })
-    ironRock.addEventListener('click', function(){
-        amount -= 6000;
-        disp.innerHTML = amount;
-        picarea.src="iron.png"
-        button.onclick = function () {
-            clickAmount++;
-            amount += 300;
+    emerald.addEventListener('click', function(){
+        if (amount >= 450000){
+            amount -= 450000;
             disp.innerHTML = amount;
+            picarea.src="emerald.png"
+            button.onclick = function () {
+                clickAmount++;
+                amount += 5000;
+                disp.innerHTML = amount;
+            }
+        } else  {
+            alert("Not enough rocks!");
         }
     })
-    silverRock.addEventListener('click', function(){
-        amount -= 10000;
-        disp.innerHTML = amount;
-        picarea.src="silver.png"
-        button.onclick = function () {
-            clickAmount++;
-            amount += 300;
+    diamond.addEventListener('click', function(){
+        if (amount >= 900000){
+            amount -= 900000;
             disp.innerHTML = amount;
+            picarea.src="diamond.png"
+            button.onclick = function () {
+                clickAmount++;
+                amount += 10000;
+                disp.innerHTML = amount;
+            }
+        } else  {
+            alert("Not enough rocks!");
+        }
+    })
+
+    const next = document.getElementById('nextWorld');
+
+    next.addEventListener('click', function (){
+        if (amount < 1000000){
+            alert("Not enough rocks!")
         }
     })
 
