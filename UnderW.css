@@ -1,0 +1,27 @@
+body{
+    background-image: url(UnderWater.jpg);
+}
+h1{
+    color: midnightblue;
+}
+h2{
+    color: lightseagreen;
+}
+h3{
+    color: cadetblue;
+}
+.clicker{
+    background-color: lightblue;
+    width: 270px;
+    height: 250px;
+    font-size: xx-large;
+}
+.container{
+    background-color: lightblue;
+    width: 1000px;
+    height: 500px;
+}
+#outerdiv{
+    background-color: grey;
+    width: 1005px;
+}

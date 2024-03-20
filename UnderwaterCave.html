@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Crystal Caverns</title>
-    <link href="StyleCrystal.css" type="text/css" rel="stylesheet">
+    <title>UnderWater</title>
+    <link href="UnderW.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 <div align="center" class="picture" id="clicker">
@@ -146,7 +146,7 @@
         if (amount < 90000){
             alert("Not enough rocks!")
         } else {
-            window.open("UnderwaterCave.html", target="_self")
+            window.open("CrystalCaverns.html", target="_self")
         }
     })
 
@@ -155,7 +155,7 @@
     let disp = document.getElementById("points");
 
     button.onclick = function () {
-        amount += 500;
+        amount += 10000;
         disp.innerHTML = amount;
     }
 </script>
