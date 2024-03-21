@@ -17,18 +17,18 @@
 <div id="outerdiv">
     <div class="container">
         <h2>MineShop!</h2>
-        <h3>Power-Up: 800 rocks per click&nbsp;&nbsp;<button id="buy1">Purchase: -20,000 rocks</button></h3>
-        <h3>Power-Up: 1,000 rocks per click&nbsp;&nbsp;<button id="buy2">Purchase: -35,000 rocks</button></h3>
-        <h3>Power-Up: 1,200 rocks per click&nbsp;&nbsp;<button id="buy3">Purchase: -40,200 rocks</button></h3>
-        <h3>Power-Up: 1,500 rocks per click&nbsp;&nbsp;<button id="buy4">Purchase: -70,000 rocks</button></h3>
+        <h3>Power-Up: 15,000 rocks per click&nbsp;&nbsp;<button id="buy1">Purchase: -150,000 rocks</button></h3>
+        <h3>Power-Up: 20,000 rocks per click&nbsp;&nbsp;<button id="buy2">Purchase: -300,000 rocks</button></h3>
+        <h3>Power-Up: 25,000 rocks per click&nbsp;&nbsp;<button id="buy3">Purchase: -500,000 rocks</button></h3>
+        <h3>Power-Up: 40,000 rocks per click&nbsp;&nbsp;<button id="buy4">Purchase: -800,000 rocks</button></h3>
         <br>
         <h1></h1>
         <h2>Buy New Crystals!</h2>
-        <h3>Unlock Sapphire: 2,000 rocks per click&nbsp;&nbsp;<button id="rock2">Purchase: -200,000 rocks</button></h3>
-        <h3>Unlock Emerald: 5,000 rocks per click&nbsp;&nbsp;<button id="rock3">Purchase: -450,000 rocks</button></h3>
-        <h3>Unlock Diamond: 10,000 rocks per click&nbsp;&nbsp;<button id="rock4">Purchase: -900,000 rocks</button></h3>
+        <h3>Unlock Aquamarine: 60,000 rocks per click&nbsp;&nbsp;<button id="rock2">Purchase: -1,000,000 rocks</button></h3>
+        <h3>Unlock Aventurine: 80,000 rocks per click&nbsp;&nbsp;<button id="rock3">Purchase: -1,500,000 rocks</button></h3>
+        <h3>Unlock Malachite: 100,000 rocks per click&nbsp;&nbsp;<button id="rock4">Purchase: -2,000,000 rocks</button></h3>
         <br>
-        <h2>Unlock Next Area!&nbsp;&nbsp;<button id="nextWorld">Unlock Crystal Caverns: -1,000,000 rocks</button></h2>
+        <h2><button id="nextWorld">WIN!: -100,000,000 rocks</button></h2>
     </div>
 </div>
 
@@ -40,12 +40,12 @@
     let clickAmount = 0;
 
     buy1.addEventListener('click', function(){
-        if (amount >= 20000){
-            amount -= 20000;
+        if (amount >= 150000){
+            amount -= 150000;
             disp.innerHTML = amount;
             button.onclick = function () {
                 clickAmount++;
-                amount += 800;
+                amount += 15000;
                 disp.innerHTML = amount;
             }
         } else  {
@@ -54,12 +54,12 @@
     })
 
     buy2.addEventListener('click', function(){
-        if (amount >= 35000){
-            amount -= 35000;
+        if (amount >= 300000){
+            amount -= 300000;
             disp.innerHTML = amount;
             button.onclick = function () {
                 clickAmount++;
-                amount += 1000;
+                amount += 20000;
                 disp.innerHTML = amount;
             }
         } else  {
@@ -67,12 +67,12 @@
         }
     })
     buy3.addEventListener('click', function(){
-        if (amount >= 40200){
-            amount -= 40200;
+        if (amount >= 500000){
+            amount -= 500000;
             disp.innerHTML = amount;
             button.onclick = function () {
                 clickAmount++;
-                amount += 1200;
+                amount += 25000;
                 disp.innerHTML = amount;
             }
         } else  {
@@ -80,12 +80,12 @@
         }
     })
     buy4.addEventListener('click', function(){
-        if (amount >= 70000){
-            amount -= 70000;
+        if (amount >= 800000){
+            amount -= 800000;
             disp.innerHTML = amount;
             button.onclick = function () {
                 clickAmount++;
-                amount += 1500;
+                amount += 40000;
                 disp.innerHTML = amount;
             }
         } else  {
@@ -93,15 +93,15 @@
         }
     })
 
-    const sapphire  = document.getElementById('rock2');
-    const emerald = document.getElementById('rock3');
-    const diamond = document.getElementById('rock4');
+    const aquamarine  = document.getElementById('rock2');
+    const aventurine = document.getElementById('rock3');
+    const malachite = document.getElementById('rock4');
 
-    sapphire.addEventListener('click', function(){
+    aquamarine.addEventListener('click', function(){
         if (amount >= 200000){
             amount -= 200000;
             disp.innerHTML = amount;
-            picarea.src="sapphire.png"
+            picarea.src="aquamarine.png"
             button.onclick = function () {
                 clickAmount++;
                 amount += 2000;
@@ -111,11 +111,11 @@
             alert("Not enough rocks!");
         }
     })
-    emerald.addEventListener('click', function(){
+    aventurine.addEventListener('click', function(){
         if (amount >= 450000){
             amount -= 450000;
             disp.innerHTML = amount;
-            picarea.src="emerald.png"
+            picarea.src="Aventurine.png"
             button.onclick = function () {
                 clickAmount++;
                 amount += 5000;
@@ -125,14 +125,14 @@
             alert("Not enough rocks!");
         }
     })
-    diamond.addEventListener('click', function(){
-        if (amount >= 900000){
-            amount -= 900000;
+    malachite.addEventListener('click', function(){
+        if (amount >= 2000000){
+            amount -= 2000000;
             disp.innerHTML = amount;
-            picarea.src="diamond.png"
+            picarea.src="malachite.png"
             button.onclick = function () {
                 clickAmount++;
-                amount += 10000;
+                amount += 100000;
                 disp.innerHTML = amount;
             }
         } else  {
@@ -142,11 +142,15 @@
 
     const next = document.getElementById('nextWorld');
 
+    next.addEventListener('hover', function(){
+        disp
+    })
+
     next.addEventListener('click', function (){
-        if (amount < 90000){
+        if (amount < 100000000){
             alert("Not enough rocks!")
         } else {
-            window.open("CrystalCaverns.html", target="_self")
+            window.open("yippee.html", target="_self")
         }
     })
 
